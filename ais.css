@@ -1,0 +1,375 @@
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --nunirito:"Nunito", sans-serif;
+      --dancingtext:"Dancing Script", cursive;
+      --inter:"Inter", sans-serif;
+      --greentext:#5A7554;
+      --White:#ffffff;
+      --bgcolor:#F5EFE6;
+      --blackcolor:#000000;
+    }
+
+    body{
+      min-height:100vh;
+      width:100%;
+      background-color:var(--bgcolor);
+      overflow-x:hidden;
+    }
+
+    main{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* ================= HERO ================= */
+
+    #hero{
+      min-height:100vh;
+      width:100%;
+      background-color:var(--bgcolor);
+    }
+
+    header{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 100px;
+      position:relative;
+    }
+
+    .logo a{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      color:var(--greentext);
+      font-family:var(--dancingtext);
+      font-size:1.5rem;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:3rem;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:var(--greentext);
+      font-family:var(--inter);
+      font-size:1.1rem;
+      font-weight:600;
+    }
+
+    header button{
+      border:none;
+      width:130px;
+      height:40px;
+      border-radius:30px;
+      background-color:var(--greentext);
+      color:var(--White);
+      font-family:var(--inter);
+      cursor:pointer;
+    }
+
+    /* HAMBURGER */
+
+    .menu-toggle{
+      display:none;
+      flex-direction:column;
+      gap:5px;
+      cursor:pointer;
+    }
+
+    .menu-toggle span{
+      width:28px;
+      height:3px;
+      background-color:var(--greentext);
+      border-radius:5px;
+      transition:0.3s;
+    }
+
+    /* HERO CONTENT */
+
+    .hero-items{
+      width:100%;
+      min-height:90vh;
+      display:flex;
+      align-items:center;
+      padding:0 100px;
+      gap:40px;
+    }
+
+    .hero-text,
+    .hero-img{
+      flex:1;
+    }
+
+    .hero-text{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .hero-text h1{
+      font-family:var(--nunirito);
+      font-size:3.2rem;
+      line-height:1.2;
+    }
+
+    .span1{
+      color:var(--greentext);
+    }
+
+    .hero-text p{
+      font-family:var(--nunirito);
+      font-size:1.5rem;
+      font-weight:600;
+    }
+
+    .hero-text button{
+      border:none;
+      width:200px;
+      height:45px;
+      border-radius:40px;
+      background-color:var(--greentext);
+      color:var(--White);
+      font-family:var(--inter);
+      font-size:1rem;
+      cursor:pointer;
+    }
+
+    .hero-img{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .hero-img img{
+      width:430px;
+      max-width:100%;
+    }
+
+    /* ================= SECTION 2 ================= */
+
+    .sec2{
+      width:100%;
+      background-color:var(--White);
+      padding:60px 100px;
+    }
+
+    .sec2 h1{
+      text-align:center;
+      font-family:var(--nunirito);
+      font-size:2.8rem;
+      margin-bottom:50px;
+    }
+
+    .sec2-items{
+      display:flex;
+      align-items:center;
+      gap:60px;
+    }
+
+    .sec2-img{
+      flex:1;
+    }
+
+    .sec2-img img{
+      width:100%;
+      max-width:430px;
+    }
+
+    .choose-us-items{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+    }
+
+    .item{
+      display:flex;
+      gap:15px;
+      align-items:flex-start;
+    }
+
+    .item img{
+      width:50px;
+      height:50px;
+      background-color:var(--greentext);
+      border-radius:50%;
+      padding:10px;
+    }
+
+    .item p{
+      font-family:var(--nunirito);
+      font-weight:700;
+      line-height:1.7;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    /* LARGE TABLETS */
+
+    @media(max-width:1200px){
+
+      header{
+        padding:20px 60px;
+      }
+
+      .hero-items{
+        padding:0 60px;
+      }
+
+      .sec2{
+        padding:60px;
+      }
+
+      .hero-text h1{
+        font-size:2.7rem;
+      }
+
+    }
+
+    /* TABLETS */
+
+    @media(max-width:992px){
+
+      .hero-items{
+        flex-direction:column;
+        text-align:center;
+        padding:60px 40px;
+      }
+
+      .hero-text{
+        align-items:center;
+      }
+
+      .hero-text h1{
+        font-size:2.5rem;
+      }
+
+      .hero-text p{
+        font-size:1.2rem;
+      }
+
+      .hero-img img{
+        width:330px;
+      }
+
+      .sec2-items{
+        flex-direction:column;
+      }
+
+      .sec2{
+        padding:50px 40px;
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      header{
+        padding:20px;
+      }
+
+      nav{
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+        background-color:var(--bgcolor);
+        display:none;
+        padding:25px 0;
+        box-shadow:0 5px 10px rgba(0,0,0,0.1);
+      }
+
+      nav.active{
+        display:block;
+      }
+
+      nav ul{
+        flex-direction:column;
+        align-items:center;
+        gap:2rem;
+      }
+
+      header button{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:flex;
+      }
+
+      .hero-items{
+        padding:40px 20px;
+      }
+
+      .hero-text h1{
+        font-size:2rem;
+      }
+
+      .hero-text p{
+        font-size:1rem;
+      }
+
+      .hero-img img{
+        width:260px;
+      }
+
+      .sec2{
+        padding:40px 20px;
+      }
+
+      .sec2 h1{
+        font-size:2rem;
+      }
+
+      .item{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+      }
+
+    }
+
+    /* SMALL MOBILE */
+
+    @media(max-width:480px){
+
+      .logo a{
+        font-size:1.1rem;
+      }
+
+      .hero-text h1{
+        font-size:1.7rem;
+      }
+
+      .hero-text button{
+        width:180px;
+      }
+
+      .hero-img img{
+        width:220px;
+      }
+
+      .sec2-img img{
+        width:250px;
+      }
+
+      .item p{
+        font-size:0.95rem;
+      }
+
+    }
